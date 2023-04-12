@@ -29,7 +29,7 @@ The equation for Ohm's Law can be written in three different ways (each way can 
 
 The best way to understand how Ohm's law works is too look at examples, so we will analyze two circuits. Let's start with the following circuit, which has one voltage source and one resistor, as well as a ground reference. We will go over each symbol and what they mean as we go.
 
-[image](../../images/cicuitsI/001.png)
+[image](../../images/circuitsI/001.png)
 
 On the left we have a voltage source indicated by a circle with a positive terminal (on the top denoted by a `+`) and a negative terminal (on the bottom denoted by a `-`). These two symbols are important as they tell us which direction the voltage source will try to push, from positive to negative or from high to low. The `V2` tells us the name of the voltage source, and `5V` indicates the voltage provided by the source, in this case 5 volts.
 
@@ -65,7 +65,7 @@ Although this voltage drop is the same as the voltage source, this will not alwa
 
 Let's analyze a similar circuit, but with a current source rather than a voltage source.
 
-[image](../../images/cicuitsI/002.png)
+[image](../../images/circuitsI/002.png)
 
 The current source is a circle just like a voltage source, though instead of `+` and `-` indicators, we have an arrow indicating the direction of current flow. The current source is named `I1` and has a value of 500 milliamps or 0.5 amps. Let's calculate the voltage drop across the resistor `R2` which has a value of 100$\Omega$ using Ohm's Law.
 
