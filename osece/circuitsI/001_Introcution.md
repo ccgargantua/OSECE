@@ -33,7 +33,7 @@ The best way to understand how Ohm's law works is too look at examples, so we wi
 
 On the left we have a voltage source indicated by a circle with a positive terminal (on the top denoted by a `+`) and a negative terminal (on the bottom denoted by a `-`). These two symbols are important as they tell us which direction the voltage source will try to push, from positive to negative or from high to low. The `V2` tells us the name of the voltage source, and `5V` indicates the voltage provided by the source, in this case 5 volts.
 
-On the right we have a resistor indicated by the zig-zag line. The name of the resistor is `R1` and it provides a resistance with a value of 100$\Omega$.
+On the right we have a resistor indicated by the zig-zag line. The name of the resistor is `R1` and it provides a resistance with a value of $100\Omega$.
 
 Finally, at the bottom we have a ground reference indicated by a triangle. It is worth noting that ground and all points connected to ground through a wire have a voltage of 0 volts.
 
@@ -67,7 +67,7 @@ Let's analyze a similar circuit, but with a current source rather than a voltage
 
 ![image](../../images/circuitsI/002.png)
 
-The current source is a circle just like a voltage source, though instead of `+` and `-` indicators, we have an arrow indicating the direction of current flow. The current source is named `I1` and has a value of 500 milliamps or 0.5 amps. Let's calculate the voltage drop across the resistor `R2` which has a value of 100$\Omega$ using Ohm's Law.
+The current source is a circle just like a voltage source, though instead of `+` and `-` indicators, we have an arrow indicating the direction of current flow. The current source is named `I1` and has a value of 500 milliamps or 0.5 amps. Let's calculate the voltage drop across the resistor `R2` which has a value of $100\Omega$ using Ohm's Law.
 
 $V=I*R$
 
