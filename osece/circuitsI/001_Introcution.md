@@ -8,7 +8,7 @@ This text will serve as a basic introduction to electric circuit analysis. In th
 ## Voltage, Current and Resistance
 A circuit is a path in which electricity flows from a source to a common ground. When analyzing circuits, we often look for values of voltage, current and resistance. To understand what these properties mean, we can use the **water analogy**, as electric circuits behave very similar to water circuits:
 
-* **Voltage** is the the force that drives a cricuit, similar to water pressure. Voltage (V) is expressed in Volts (V).
+* **Voltage** is the force that drives a cricuit, similar to water pressure. Voltage (V) is expressed in Volts (V).
 * **Current** is the flow of the electricity, similar to the flow of water. Current (I) is expressed in Amps (A)
 * **Resistance** is just as it sounds, it impedes the flow of electricity. Think of a water pipe that has a small section that is more narrow than the rest of the pipe. This narrow section would provide some resistance to the flow of water. Resistance (R) is expressed in Ohms ($\Omega$)
 
