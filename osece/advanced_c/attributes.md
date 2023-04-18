@@ -5,6 +5,11 @@ be covered. Note that not all attributes will be covered, just a small
 subset. It is important to note that attributes are not a part of the
 C standard and are extensions implemented by the compiler.
 
+Attributes covered in this text:
+
+* `unused`
+* `deprecated`
+
 ## What are attributes?
 
 Attributes are characterstics that the developer can attach to
@@ -16,8 +21,6 @@ by using the `__attribute__` keyword with the syntax
 If that doesn't make much sense to you, don't worry. It is much easier to
 understand when looking at examples, which we will do for the rest of this
 lesson.
-
-## Examples
 
 ### The `unused` attribute
 
@@ -61,3 +64,38 @@ int main(int argc, char** argv __attribute__((unused)))
 
 Now when we compile with `-Wall`, the program compiles without any
 warnings.
+
+### The `deprectated` attribute
+
+The `deprecated` attribute is used to mark a variable or function as
+deprected, and the compiler will generate a warning when it encounters
+code that usese that variable or function.
+
+Consider the following code:
+
+```c
+#include <stdio.h>
+
+int __attribute__((deprecated)) deprecated_add(int x, int y)
+{
+    return x + y;
+}
+
+int main(void)
+{
+    printf("%d\n", deprecated_add(2, 2));
+    return 0;
+}
+```
+
+If we compile this code, it will run, but the following warning will be
+generated.
+
+```
+src/main.c:10:5: warning: ‘deprecated_add’ is deprecated [-Wdeprecated-declarations]
+   10 |     printf("%d\n", deprecated_add(2, 2));
+      |     ^~~~~~
+src/main.c:3:33: note: declared here
+    3 | int __attribute__((deprecated)) deprecated_add(int x, int y)
+      |
+```
