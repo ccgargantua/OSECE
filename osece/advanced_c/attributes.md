@@ -23,6 +23,8 @@ If that doesn't make much sense to you, don't worry. It is much easier to
 understand when looking at examples, which we will do for the rest of this
 lesson.
 
+---
+
 ### The `unused` attribute
 
 The `unused` attribute is used to tell the compiler that there is a
@@ -66,6 +68,8 @@ int main(int argc, char** argv __attribute__((unused)))
 Now when we compile with `-Wall`, the program compiles without any
 warnings.
 
+---
+
 ### The `deprecated` attribute
 
 The `deprecated` attribute is used to mark a variable or function as
@@ -105,6 +109,8 @@ It is worth mentioning that some attributes take arguments, sometimes these
 arguments can even be optional. `deprecated` is one such attribute. You may
 see something like `__attribute__((deprecated ("Please use <other_function> instead")))`.
 This will tack the message to the end of the error.
+
+---
 
 ### The `nonstring` attribute
 
