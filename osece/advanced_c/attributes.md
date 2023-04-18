@@ -19,10 +19,6 @@ help the compiler tweak its behavior. These attributes are specified
 by using the `__attribute__` keyword with the syntax
 `__attribute__((ATTRIBUTE_NAME))`.
 
-If that doesn't make much sense to you, don't worry. It is much easier to
-understand when looking at examples, which we will do for the rest of this
-lesson.
-
 ---
 
 ### The `unused` attribute
@@ -53,7 +49,7 @@ src/main.c:3:27: warning: unused parameter ‘argv’ [-Wunused-parameter]
 Clearly we do not have a use for the `argv` in this program, but we
 cannot exclude it from the parameter list. We can use the `unused`
 attribute to tell the compiler (and anyone reading our code) that the
-variable or method is intentionally unused, in this case `argv`.
+variable or function is intentionally unused, in this case `argv`.
 
 ```c
 #include <stdio.h>
