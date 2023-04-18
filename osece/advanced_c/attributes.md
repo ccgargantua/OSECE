@@ -65,10 +65,10 @@ int main(int argc, char** argv __attribute__((unused)))
 Now when we compile with `-Wall`, the program compiles without any
 warnings.
 
-### The `deprectated` attribute
+### The `deprecated` attribute
 
 The `deprecated` attribute is used to mark a variable or function as
-deprected, and the compiler will generate a warning when it encounters
+deprecated, and the compiler will generate a warning when it encounters
 code that usese that variable or function.
 
 Consider the following code:
