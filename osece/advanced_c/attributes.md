@@ -9,6 +9,7 @@ Attributes covered in this text:
 
 * `unused`
 * `deprecated`
+* `nonstring`
 
 ## What are attributes?
 
@@ -98,4 +99,40 @@ src/main.c:10:5: warning: ‘deprecated_add’ is deprecated [-Wdeprecated-decla
 src/main.c:3:33: note: declared here
     3 | int __attribute__((deprecated)) deprecated_add(int x, int y)
       |
+```
+
+It is worth mentioning that some attributes take arguments, sometimes these
+arguments can even be optional. `deprecated` is one such attribute. You may
+see something like `__attribute__((deprecated ("Please use <other_function> instead")))`.
+This will tack the message to the end of the error.
+
+### The `nonstring` attribute
+
+The `nonstring` attribute marks character arrays and pointers, both signed and unsigned,
+as potentially not ending with a null-terminator. Upon passing a variable with such
+an attribute to a function that assumes its parameter to be null-terminated, the
+compiler will spit out a warning. Consider the following code:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    char thing[] __attribute__((nonstring)) = "";
+    printf("%s\n", thing);
+    return 0;
+}
+```
+
+If we compile this code, it will run, but the following warning will be
+generated.
+
+```
+src/main.c:8:5: warning: ‘__builtin_puts’ argument 1 declared attribute ‘nonstring’ [-Wstringop-overread]
+    8 |     printf("%s\n", thing);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+src/main.c:6:10: note: argument ‘thing’ declared here
+    6 |     char thing[] __attribute__((nonstring)) = "";
+      |          ^~~~~
+
 ```
